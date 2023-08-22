@@ -28,7 +28,19 @@ class ViewController: UIViewController {
         let vc = CodeNextViewController(labelString: "present from code")
         self.present(vc, animated: true)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "pushNext"?:
+            guard let nextVC = segue.destination as? SegueNextViewController else { return }
+            nextVC.labelText = "Pushed from segue"
+        case "modalNext"?:
+            guard let nextVC = segue.destination as? SegueNextViewController else { return }
+            nextVC.labelText = "Present from segue"
+        default:
+            return
+        }
+    }
 
 }
 
