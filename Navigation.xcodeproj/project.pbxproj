@@ -13,7 +13,6 @@
 		16E4006C2A9540C3001B77AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E4006A2A9540C3001B77AE /* Main.storyboard */; };
 		16E4006E2A9540C5001B77AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16E4006D2A9540C5001B77AE /* Assets.xcassets */; };
 		16E400712A9540C5001B77AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E4006F2A9540C5001B77AE /* LaunchScreen.storyboard */; };
-		16E4007C2A9540C5001B77AE /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4007B2A9540C5001B77AE /* NavigationTests.swift */; };
 		16E400862A9540C5001B77AE /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400852A9540C5001B77AE /* NavigationUITests.swift */; };
 		16E400882A9540C5001B77AE /* NavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400872A9540C5001B77AE /* NavigationUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 		16E400702A9540C5001B77AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16E400722A9540C5001B77AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16E400772A9540C5001B77AE /* NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		16E4007B2A9540C5001B77AE /* NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTests.swift; sourceTree = "<group>"; };
 		16E400812A9540C5001B77AE /* NavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E400852A9540C5001B77AE /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
 		16E400872A9540C5001B77AE /* NavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		16E4007A2A9540C5001B77AE /* NavigationTests */ = {
 			isa = PBXGroup;
 			children = (
-				16E4007B2A9540C5001B77AE /* NavigationTests.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16E4007C2A9540C5001B77AE /* NavigationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
