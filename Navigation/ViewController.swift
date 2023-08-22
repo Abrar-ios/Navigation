@@ -18,6 +18,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction private func pushNextViewController(){
+        let vc = CodeNextViewController(labelString: "Pushed from Code")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction private func  presentModalViewController(){
+        let vc = CodeNextViewController(labelString: "present from code")
+        self.present(vc, animated: true)
+    }
 
 
 }
