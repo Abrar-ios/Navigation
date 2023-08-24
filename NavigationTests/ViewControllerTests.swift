@@ -9,7 +9,10 @@ import XCTest
 @testable import Navigation
 
 final class ViewControllerTests:XCTestCase {
-    func test_zero(){
-        XCTFail("There is no test implemented yer in ViewControllerTests yet")
+    func test_loading(){
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let sut : ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
+        sut.loadViewIfNeeded()
+        XCTAssertNotNil(sut.codePushButton)
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		163DD4662A97AD9B00F95D26 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DD4652A97AD9B00F95D26 /* ViewControllerTests.swift */; };
+		163DD4682A97AF0100F95D26 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DD4672A97AF0100F95D26 /* TestHelpers.swift */; };
 		16E400652A9540C3001B77AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400642A9540C3001B77AE /* AppDelegate.swift */; };
 		16E400672A9540C3001B77AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400662A9540C3001B77AE /* SceneDelegate.swift */; };
 		16E400692A9540C3001B77AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400682A9540C3001B77AE /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		163DD4652A97AD9B00F95D26 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		163DD4672A97AF0100F95D26 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		16E400612A9540C3001B77AE /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E400642A9540C3001B77AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E400662A9540C3001B77AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				163DD4652A97AD9B00F95D26 /* ViewControllerTests.swift */,
+				163DD4672A97AF0100F95D26 /* TestHelpers.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				163DD4662A97AD9B00F95D26 /* ViewControllerTests.swift in Sources */,
+				163DD4682A97AF0100F95D26 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
