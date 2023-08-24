@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163DD4662A97AD9B00F95D26 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DD4652A97AD9B00F95D26 /* ViewControllerTests.swift */; };
 		16E400652A9540C3001B77AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400642A9540C3001B77AE /* AppDelegate.swift */; };
 		16E400672A9540C3001B77AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400662A9540C3001B77AE /* SceneDelegate.swift */; };
 		16E400692A9540C3001B77AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E400682A9540C3001B77AE /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		163DD4652A97AD9B00F95D26 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		16E400612A9540C3001B77AE /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E400642A9540C3001B77AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E400662A9540C3001B77AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		16E4007A2A9540C5001B77AE /* NavigationTests */ = {
 			isa = PBXGroup;
 			children = (
+				163DD4652A97AD9B00F95D26 /* ViewControllerTests.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 					};
 					16E400762A9540C5001B77AE = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 16E400602A9540C3001B77AE;
 					};
 					16E400802A9540C5001B77AE = {
@@ -273,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163DD4662A97AD9B00F95D26 /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,14 +498,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abrarulhaq.Navigation.NavigationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Navigation";
@@ -512,10 +524,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abrarulhaq.Navigation.NavigationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
