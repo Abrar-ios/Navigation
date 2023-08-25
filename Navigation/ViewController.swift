@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             nextVC.labelText = "Pushed from segue"
         case "modalNext"?:
             guard let nextVC = segue.destination as? SegueNextViewController else { return }
-            nextVC.labelText = "Present from segue"
+            nextVC.labelText = "Modal from segue"
         default:
             return
         }
