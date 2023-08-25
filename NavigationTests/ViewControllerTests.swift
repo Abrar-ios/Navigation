@@ -8,20 +8,30 @@
 import XCTest
 import ViewControllerPresentationSpy
 @testable import Navigation
-
+@MainActor
  final class ViewControllerTests:XCTestCase {
+     private var presentationverifier: PresentationVerifier!
+     private var sut: ViewController!
+     
+     override func setUp() {
+         super.setUp()
+         presentationverifier = PresentationVerifier()
+         let sb = UIStoryboard(name: "Main", bundle: nil)
+         let sut : ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
+         sut.loadViewIfNeeded()
+     }
+     
+     override func tearDown() {
+         sut = nil
+         presentationverifier = nil
+         super.tearDown()
+     }
      
     func test_loading(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let sut : ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
-        sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.codePushButton)
     }
     
     func test_tappingCodePushButton_shouldPushCodeNextViewController(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let sut : ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
-        sut.loadViewIfNeeded()
         let navigation = UINavigationController(rootViewController: sut)
         tap(sut.codePushButton)
         executeRunLoop()
@@ -52,10 +62,6 @@ import ViewControllerPresentationSpy
     }
     
      @MainActor func test_tappingCodeModalButton_shouldPresentCodeNextViewController(){
-        let presentationverifier = PresentationVerifier()
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
-        sut.loadViewIfNeeded()
         tap(sut.codeModalButton)
         let codeNextVC: CodeNextViewController? = presentationverifier.verify( animated: true, presentingViewController: sut)
         XCTAssertEqual(codeNextVC?.label.text, "present from code")
