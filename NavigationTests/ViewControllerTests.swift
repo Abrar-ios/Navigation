@@ -6,9 +6,11 @@
 //
 
 import XCTest
+import ViewControllerPresentationSpy
 @testable import Navigation
 
-final class ViewControllerTests:XCTestCase {
+ final class ViewControllerTests:XCTestCase {
+     
     func test_loading(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let sut : ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
@@ -47,5 +49,16 @@ final class ViewControllerTests:XCTestCase {
             return
         }
         XCTAssertEqual(codeNextVc.label.text, "present from code")
+    }
+    
+     @MainActor func test_tappingCodeModalButton_shouldPresentCodeNextViewController(){
+        let presentationverifier = PresentationVerifier()
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let sut: ViewController = sb.instantiateViewController(identifier: String(describing: ViewController.self))
+        sut.loadViewIfNeeded()
+        tap(sut.codeModalButton)
+        let codeNextVC: CodeNextViewController? = presentationverifier.verify( animated: true, presentingViewController: sut)
+        XCTAssertEqual(codeNextVC?.label.text, "present from code")
+        
     }
 }
