@@ -38,4 +38,7 @@ final class NavigationUITests: XCTestCase {
             }
         }
     }
+    func executeRunLoop() {
+        RunLoop.current.run(until: Date())
+    }
 }

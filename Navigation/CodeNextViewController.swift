@@ -34,7 +34,10 @@ class CodeNextViewController: UIViewController {
                                  toItem: UIView){
         NSLayoutConstraint(item: fromItem, attribute: attribute, relatedBy: .equal, toItem: toItem, attribute: attribute, multiplier: 1, constant: 0).isActive = true
     }
-
+    
+    deinit {
+        print(">> ViewController.deinit")
+    }
  
 
 }
